@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ikariam Tools</title>
+</head>
+<body>
+
+  <h1>Ikariam Resource Calculator</h1>
+
+  <label>Wood:</label>
+  <input id="wood" type="number"><br><br>
+
+  <label>Marble:</label>
+  <input id="marble" type="number"><br><br>
+
+  <label>Sulfur:</label>
+  <input id="sulfur" type="number"><br><br>
+
+  <button onclick="calc()">Calculate</button>
+
+  <h2 id="result"></h2>
+
+  <script>
+    function calc() {
+      let w = document.getElementById("wood").value;
+      let m = document.getElementById("marble").value;
+      let s = document.getElementById("sulfur").value;
+
+      let total = Number(w) + Number(m) + Number(s);
+
+      document.getElementById("result").innerText =
+        "Total Resources: " + total;
+    }
+  </script>
+
+</body>
+</html>
